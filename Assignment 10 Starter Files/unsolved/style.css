@@ -1,6 +1,6 @@
 :root {
   --primary-color: #06b3bc;
-  --text-color: #042d2f;
+  --text-color: #000000;
   --text-color-lighter: #074c50;
   --secondary-color: #F78828;
   --warn-color: #FDD219;
@@ -21,63 +21,35 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a1a1a1' fill-opacity='0.59' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h1, h2 {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-header {
+.header {
+  font-size: 1.5rem;
+  color: var(--off-white);
   background-color: var(--primary-color);
   padding: 48px 0;
   border-bottom: var(--secondary-color) 6px solid;
 }
 
-header a {
-  font-size: 1.5rem;
-  color: var(--off-white);
-}
-
-main a {
-  color: var(--danger-color);
-}
-
-main > article, nav{
-  max-width: 1200px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-nav {
-  display: flex;
-}
-
-nav > a:not(:first-of-type){
-  margin-left: 24px;
-}
-
-nav > a.logo {
-  margin-right: auto;
-  text-transform: uppercase;
-}
-
-main > section, main > article {
+main {
   margin-bottom: 96px;
   box-shadow: 4px 4px 10px var(--gray);
   background-color: var(--white);
+  padding: 48px 96px;
 }
 
-main > section.hero {
+.nav {
+  display: flex;
+  margin-left: 24px;
+  max-width: 1300px;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-right: auto;
+  text-transform: uppercase;
+  float: left;
+}
+
+.hero {
   height: 300px;
   background-image: url(https://picsum.photos/1920/1000);
   background-size: cover;
@@ -87,17 +59,15 @@ main > section.hero {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-}
-
-section.hero > .call-to-action {
   font-size: 2rem;
+  font color: var (--text-color);
   font-weight: 700;
-  text-shadow: var(--white) 0px 0px 10px, var(--white) 0px 0px 20px, var(--gray) 2px 2px 2px;
+  text-shadow: var (--white);
   padding: 0 48px;
   margin: 0;
 }
 
-section.hero > button {
+.button {
   background-color: var(--secondary-color);
   border: none;
   padding: 12px 24px;
@@ -106,16 +76,23 @@ section.hero > button {
   cursor: pointer;
 }
 
-main article {
-  padding: 48px 96px;
+.article {
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
-main p {
+.article_h1_h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.main__p {
   line-height: 1.75;
   margin-bottom: 48px;;
 }
 
-main > article img {
+/*Images within article */
+.article__image {
   float: left;
   width: 300px;
   height: auto;
@@ -123,7 +100,7 @@ main > article img {
   margin-bottom: 6px;
 }
 
-footer {
+.footer {
   margin-top: auto;
   background-color: var(--gray);
   text-align: center;
